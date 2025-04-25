@@ -3,22 +3,22 @@ Option Explicit
 Dim score
 score = 0
 ' Loading
-msgbox "Succesfully loaded everything", 0+64, "Succesfully loaded"
+msgbox "Succesfully loaded everything", 0+64+vbSystemModal, "Succesfully loaded"
 ' Disclaimer
-msgbox "DISCLAIMER: This file doesn't contain a virus or mallware. Virus scan by McCafe Antivirus",0+48, "No virus"
+msgbox "DISCLAIMER: This file doesn't contain a virus or mallware. Virus scan by McCafe Antivirus",0+48+vbSystemModal, "No virus"
 ' Tutorial
-msgbox "Vul de juiste antwoorden in. Als je 1 antwoord fout hebt, moet je het opnieuw proberen. Op het einde van de quiz krijg je een code die je kunt gebruiken om toegang te krijgen tot de volgende opdracht. &vbCrLf& Veel succes.",0+32,"Tutorial"
+msgbox "Vul de juiste antwoorden in. Als je 1 antwoord fout hebt, moet je het opnieuw proberen. Op het einde van de quiz krijg je een code die je kunt gebruiken om toegang te krijgen tot de volgende opdracht. Veel succes.",0+32+vbSystemModal,"Tutorial"
 ' Vraag 1
 Do
     Dim antwoord1
     antwoord1 = InputBox("a", "Quiz - Vraag 1")
 
     If LCase(antwoord1) = "a" Then
-        MsgBox "Correct!", vbInformation, "Goed gedaan"
+        MsgBox "Correct!", vbInformation + vbSystemModal, "Goed gedaan"
         score = score + 1
         Exit Do
     Else
-        MsgBox "Fout antwoord. Probeer het opnieuw.", vbExclamation, "Oops!"
+        MsgBox "Fout antwoord. Probeer het opnieuw.", vbExclamation + vbSystemModal, "Oops!"
     End If
 Loop
 
@@ -28,11 +28,11 @@ Do
     antwoord2 = InputBox("b", "Quiz - Vraag 2")
 
     If LCase(antwoord2) = "b" Then
-        MsgBox "Correct!", vbInformation, "Goed gedaan"
+        MsgBox "Correct!", vbInformation+vbSystemModal, "Goed gedaan"
         score = score + 1
         Exit Do
     Else
-        MsgBox "Fout antwoord. Probeer het opnieuw.", vbExclamation, "Oops!"
+        MsgBox "Fout antwoord. Probeer het opnieuw.", vbExclamation+vbSystemModal, "Oops!"
     End If
 Loop
 
@@ -42,11 +42,11 @@ Do
     antwoord3 = InputBox("c", "Quiz - Vraag 3")
 
     If LCase(antwoord3) = "c" Then
-        MsgBox "Correct!", vbInformation, "Goed gedaan"
+        MsgBox "Correct!", vbInformation+vbSystemModal, "Goed gedaan"
         score = score + 1
         Exit Do
     Else
-        MsgBox "Fout antwoord. Probeer het opnieuw.", vbExclamation, "Oops!"
+        MsgBox "Fout antwoord. Probeer het opnieuw.", vbExclamation+vbSystemModal, "Oops!"
     End If
 Loop
 
@@ -57,11 +57,11 @@ Do
     antwoord4 = InputBox("d", "Quiz - Vraag 4")
 
     If LCase(antwoord4) = "d" Then
-        MsgBox "Correct!", vbInformation, "Goed gedaan"
+        MsgBox "Correct!", vbInformation+vbSystemModal, "Goed gedaan"
         score = score + 1
         Exit Do
     Else
-        MsgBox "Fout antwoord. Probeer het opnieuw.", vbExclamation, "Oops!"
+        MsgBox "Fout antwoord. Probeer het opnieuw.", vbExclamation+vbSystemModal, "Oops!"
     End If
 Loop
 
@@ -71,11 +71,11 @@ Do
     antwoord5 = InputBox("e", "Quiz - Vraag 5")
 
     If LCase(antwoord5) = "e" Then
-        MsgBox "Correct!", vbInformation, "Goed gedaan"
+        MsgBox "Correct!", vbInformation+vbSystemModal, "Goed gedaan"
         score = score + 1
         Exit Do
     Else
-        MsgBox "Fout antwoord. Probeer het opnieuw.", vbExclamation, "Oops!"
+        MsgBox "Fout antwoord. Probeer het opnieuw.", vbExclamation+vbSystemModal, "Oops!"
     End If
 Loop
 
@@ -85,11 +85,11 @@ Do
     antwoord6 = InputBox("f", "Quiz - Vraag 5")
 
     If LCase(antwoord6) = "f" Then
-        MsgBox "Correct!", vbInformation, "Goed gedaan"
+        MsgBox "Correct!", vbInformation+vbSystemModal, "Goed gedaan"
         score = score + 1
         Exit Do
     Else
-        MsgBox "Fout antwoord. Probeer het opnieuw.", vbExclamation, "Oops!"
+        MsgBox "Fout antwoord. Probeer het opnieuw.", vbExclamation+vbSystemModal, "Oops!"
     End If
 Loop
 
@@ -99,11 +99,11 @@ Do
     antwoord7 = InputBox("g", "Quiz - Vraag 5")
 
     If LCase(antwoord7) = "g" Then
-        MsgBox "Correct!", vbInformation, "Goed gedaan"
+        MsgBox "Correct!", vbInformation+vbSystemModal, "Goed gedaan"
         score = score + 1
         Exit Do
     Else
-        MsgBox "Fout antwoord. Probeer het opnieuw.", vbExclamation, "Oops!"
+        MsgBox "Fout antwoord. Probeer het opnieuw.", vbExclamation+vbSystemModal, "Oops!"
     End If
 Loop
 
@@ -113,11 +113,11 @@ Do
     antwoord8 = InputBox("h", "Quiz - Vraag 5")
 
     If LCase(antwoord8) = "h" Then
-        MsgBox "Correct!", vbInformation, "Goed gedaan"
+        MsgBox "Correct!", vbInformation+vbSystemModal, "Goed gedaan"
         score = score + 1
         Exit Do
     Else
-        MsgBox "Fout antwoord. Probeer het opnieuw.", vbExclamation, "Oops!"
+        MsgBox "Fout antwoord. Probeer het opnieuw.", vbExclamation+vbSystemModal, "Oops!"
     End If
 Loop
 
@@ -127,11 +127,11 @@ Do
     antwoord9 = InputBox("i", "Quiz - Vraag 5")
 
     If LCase(antwoord9) = "i" Then
-        MsgBox "Correct!", vbInformation, "Goed gedaan"
+        MsgBox "Correct!", vbInformation+vbSystemModal, "Goed gedaan"
         score = score + 1
         Exit Do
     Else
-        MsgBox "Fout antwoord. Probeer het opnieuw.", vbExclamation, "Oops!"
+        MsgBox "Fout antwoord. Probeer het opnieuw.", vbExclamation+vbSystemModal, "Oops!"
     End If
 Loop
 
