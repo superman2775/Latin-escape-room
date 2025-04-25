@@ -79,6 +79,62 @@ Do
     End If
 Loop
 
-MsgBox "Je hebt de quiz voltooid met een score van " & score & " van de 5!", vbInformation, "Quiz voltooid"
+' Vraag 6
+Do
+    Dim antwoord6
+    antwoord6 = InputBox("f", "Quiz - Vraag 5")
+
+    If LCase(antwoord6) = "f" Then
+        MsgBox "Correct!", vbInformation, "Goed gedaan"
+        score = score + 1
+        Exit Do
+    Else
+        MsgBox "Fout antwoord. Probeer het opnieuw.", vbExclamation, "Oops!"
+    End If
+Loop
+
+' Vraag 7
+Do
+    Dim antwoord7
+    antwoord7 = InputBox("g", "Quiz - Vraag 5")
+
+    If LCase(antwoord7) = "g" Then
+        MsgBox "Correct!", vbInformation, "Goed gedaan"
+        score = score + 1
+        Exit Do
+    Else
+        MsgBox "Fout antwoord. Probeer het opnieuw.", vbExclamation, "Oops!"
+    End If
+Loop
+
+' Vraag 8
+Do
+    Dim antwoord8
+    antwoord8 = InputBox("h", "Quiz - Vraag 5")
+
+    If LCase(antwoord8) = "h" Then
+        MsgBox "Correct!", vbInformation, "Goed gedaan"
+        score = score + 1
+        Exit Do
+    Else
+        MsgBox "Fout antwoord. Probeer het opnieuw.", vbExclamation, "Oops!"
+    End If
+Loop
+
+' Vraag 9
+Do
+    Dim antwoord9
+    antwoord9 = InputBox("i", "Quiz - Vraag 5")
+
+    If LCase(antwoord9) = "i" Then
+        MsgBox "Correct!", vbInformation, "Goed gedaan"
+        score = score + 1
+        Exit Do
+    Else
+        MsgBox "Fout antwoord. Probeer het opnieuw.", vbExclamation, "Oops!"
+    End If
+Loop
+
+MsgBox "Je hebt de quiz voltooid met een score van " & score & " van de 9!", vbInformation, "Quiz voltooid"
 ' Copyright and stuff
 MsgBox "Copyright 2025 super_man2775. For extra support: send a message on Discord to '@super_man2775.'. The point behind my name is important!"
