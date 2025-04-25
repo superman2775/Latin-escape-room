@@ -7,7 +7,7 @@ msgbox "Succesfully loaded everything", 0+64, "Succesfully loaded"
 ' Disclaimer
 msgbox "DISCLAIMER: This file doesn't contain a virus or mallware. Virus scan by McCafe Antivirus",0+48, "No virus"
 ' Tutorial
-msgbox "Vul de juiste antwoorden in. Als je 1 antwoord fout hebt, ben je verloren. Veel succes.",0+32,"Tutorial"
+msgbox "Vul de juiste antwoorden in. Als je 1 antwoord fout hebt, moet je het opnieuw proberen. Op het einde van de quiz krijg je een code die je kunt gebruiken om toegang te krijgen tot de volgende opdracht. &vbCrLf& Veel succes.",0+32,"Tutorial"
 ' Vraag 1
 Do
     Dim antwoord1
