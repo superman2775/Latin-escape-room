@@ -1,0 +1,70 @@
+<html>
+<head>
+  <title>Quiz</title>
+  <HTA:APPLICATION 
+    ID="quizApp"
+    WINDOWSTATE="maximize"
+    SHOWINTASKBAR="no"
+    CAPTION="no"
+    BORDER="none"
+    SINGLEINSTANCE="yes"
+    SCROLL="no"
+    SYSMENU="no">
+  <script language="VBScript">
+    Dim vraagIndex, score
+    vraagIndex = 0
+    score = 0
+
+    Sub Window_OnLoad
+      window.resizeTo screen.availWidth, screen.availHeight
+      window.moveTo 0, 0
+      ToonVraag
+    End Sub
+
+    Sub ToonVraag
+      Dim vragen, antwoorden
+      vragen = Array( _
+        "Wat is de hoofdstad van Frankrijk?", _
+        "Wat is 5 + 7?", _
+        "Welke planeet staat bekend als de rode planeet?" _
+      )
+      antwoorden = Array("parijs", "12", "mars")
+
+      If vraagIndex < UBound(vragen) + 1 Then
+        lblVraag.innerText = vragen(vraagIndex)
+        btnBevestig.onclick = GetRef("ControleerAntwoord")
+      Else
+        BeëindigQuiz
+      End If
+    End Sub
+
+    Sub ControleerAntwoord
+      Dim juisteAntwoorden
+      juisteAntwoorden = Array("parijs", "12", "mars")
+      
+      If LCase(txtAntwoord.value) = juisteAntwoorden(vraagIndex) Then
+        score = score + 1
+      End If
+
+      txtAntwoord.value = ""
+      vraagIndex = vraagIndex + 1
+      ToonVraag
+    End Sub
+
+    Sub BeëindigQuiz
+      document.body.innerHTML = "<h1 style='color:white; text-align:center;'>Klaar! Score: " & score & " van 3</h1>"
+      window.setTimeout "CloseWindow", 5000
+    End Sub
+
+    Sub CloseWindow
+      self.close
+    End Sub
+  </script>
+</head>
+<body bgcolor="black" style="color:white; font-family:Arial; text-align:center; padding-top:100px;">
+  <h1 id="lblVraag">Vraag komt hier...</h1>
+  <input type="text" id="txtAntwoord" style="font-size:20px; width:300px;">
+  <br><br>
+  <input type="button" id="btnBevestig" value="Bevestig" style="font-size:20px;">
+</body>
+</html>
