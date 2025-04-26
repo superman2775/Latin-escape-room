@@ -11,9 +11,22 @@
     SCROLL="no"
     SYSMENU="no">
   <script language="VBScript">
+    Dim vragen, antwoorden
     Dim vraagIndex, score
     vraagIndex = 0
     score = 0
+
+    vragen = Array( _
+      "Wat is de hoofdstad van Frankrijk?", _
+      "Wat is 5 + 7?", _
+      "Welke planeet staat bekend als de rode planeet?" _
+    )
+
+    antwoorden = Array( _
+      "parijs", _
+      "12", _
+      "mars" _
+    )
 
     Sub Window_OnLoad
       window.resizeTo screen.availWidth, screen.availHeight
@@ -22,37 +35,25 @@
     End Sub
 
     Sub ToonVraag
-      Dim vragen, antwoorden
-      vragen = Array( _
-        "Wat is de hoofdstad van Frankrijk?", _
-        "Wat is 5 + 7?", _
-        "Welke planeet staat bekend als de rode planeet?" _
-      )
-      antwoorden = Array("parijs", "12", "mars")
-
-      If vraagIndex < UBound(vragen) + 1 Then
+      If vraagIndex <= UBound(vragen) Then
         lblVraag.innerText = vragen(vraagIndex)
-        btnBevestig.onclick = GetRef("ControleerAntwoord")
       Else
         BeëindigQuiz
       End If
     End Sub
 
     Sub ControleerAntwoord
-      Dim juisteAntwoorden
-      juisteAntwoorden = Array("parijs", "12", "mars")
-      
-      If LCase(txtAntwoord.value) = juisteAntwoorden(vraagIndex) Then
+      If LCase(Trim(txtAntwoord.value)) = antwoorden(vraagIndex) Then
         score = score + 1
       End If
-
+      
       txtAntwoord.value = ""
       vraagIndex = vraagIndex + 1
       ToonVraag
     End Sub
 
     Sub BeëindigQuiz
-      document.body.innerHTML = "<h1 style='color:white; text-align:center;'>Klaar! Score: " & score & " van 3</h1>"
+      document.body.innerHTML = "<h1 style='color:white; text-align:center;'>Klaar! Score: " & score & " van " & (UBound(vragen) + 1) & "</h1>"
       window.setTimeout "CloseWindow", 5000
     End Sub
 
@@ -65,7 +66,6 @@
   <h1 id="lblVraag">Vraag komt hier...</h1>
   <input type="text" id="txtAntwoord" style="font-size:20px; width:300px;">
   <br><br>
-  <input type="button" id="btnBevestig" value="Bevestig" style="font-size:20px;">
+  <input type="button" value="Bevestig" onclick="ControleerAntwoord" style="font-size:20px;">
 </body>
 </html>
-
