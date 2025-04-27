@@ -13,8 +13,6 @@
   <script language="VBScript">
     Dim vragen, antwoorden
     Dim vraagIndex, score
-    vraagIndex = 0
-    score = 0
 
     vragen = Array( _
       "Wat is de hoofdstad van Frankrijk?", _
@@ -28,10 +26,14 @@
       "mars" _
     )
 
+    vraagIndex = 0
+    score = 0
+
     Sub Window_OnLoad
       window.resizeTo screen.availWidth, screen.availHeight
       window.moveTo 0, 0
       ToonVraag
+      btnBevestig.onclick = GetRef("ControleerAntwoord")
     End Sub
 
     Sub ToonVraag
@@ -66,6 +68,6 @@
   <h1 id="lblVraag">Vraag komt hier...</h1>
   <input type="text" id="txtAntwoord" style="font-size:20px; width:300px;">
   <br><br>
-  <input type="button" value="Bevestig" onclick="ControleerAntwoord" style="font-size:20px;">
+  <input type="button" id="btnBevestig" value="Bevestig" style="font-size:20px;">
 </body>
 </html>
