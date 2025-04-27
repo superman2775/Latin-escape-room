@@ -1,79 +1,71 @@
 <html>
 <head>
 <title>Quiz</title>
-<HTA:APPLICATION
+
+<HTA:APPLICATION 
   ID="QuizApp"
-  BORDER="none"
-  CAPTION="no"
-  SHOWINTASKBAR="no"
-  SINGLEINSTANCE="yes"
   WINDOWSTATE="maximize"
-  SYSMENU="no"
+  BORDER="thin"
+  CAPTION="yes"
+  SHOWINTASKBAR="yes"
+  SINGLEINSTANCE="yes"
+  SYSMENU="yes"
   SCROLL="no">
+
 <script language="VBScript">
-  Dim vragen, antwoorden
-  Dim vraagIndex, score
+Dim vragen, antwoorden
+Dim vraagIndex, score
 
-  vragen = Array( _
-    "Wat is de hoofdstad van Frankrijk?", _
-    "Wat is 5 + 7?", _
-    "Welke planeet staat bekend als de rode planeet?" _
-  )
+Sub Window_OnLoad
+    ' Variabelen instellen
+    vragen = Array( _
+        "Wat is de hoofdstad van Frankrijk?", _
+        "Wat is 5 + 7?", _
+        "Welke planeet is rood?" _
+    )
+    antwoorden = Array( _
+        "parijs", _
+        "12", _
+        "mars" _
+    )
 
-  antwoorden = Array( _
-    "parijs", _
-    "12", _
-    "mars" _
-  )
-
-  vraagIndex = 0
-  score = 0
-
-  Sub Window_OnLoad()
-    window.resizeTo screen.availWidth, screen.availHeight
-    window.moveTo 0, 0
+    vraagIndex = 0
+    score = 0
     ToonVraag
-  End Sub
+End Sub
 
-  Sub BevestigKlik()
-    ControleerAntwoord
-  End Sub
-
-  Sub ToonVraag()
+Sub ToonVraag
     If vraagIndex <= UBound(vragen) Then
-      lblVraag.innerHTML = "<h1>" & vragen(vraagIndex) & "</h1>"
+        document.getElementById("vraagLabel").innerText = vragen(vraagIndex)
     Else
-      BeëindigQuiz
+        EindeQuiz
     End If
-  End Sub
+End Sub
 
-  Sub ControleerAntwoord()
-    Dim gegevenAntwoord
-    gegevenAntwoord = LCase(Trim(txtAntwoord.value))
+Sub BevestigAntwoord
+    Dim antwoord
+    antwoord = LCase(Trim(document.getElementById("antwoordVeld").value))
 
-    If gegevenAntwoord = antwoorden(vraagIndex) Then
-      score = score + 1
+    If antwoord = antwoorden(vraagIndex) Then
+        score = score + 1
     End If
 
-    txtAntwoord.value = ""
     vraagIndex = vraagIndex + 1
+    document.getElementById("antwoordVeld").value = ""
     ToonVraag
-  End Sub
+End Sub
 
-  Sub BeëindigQuiz()
-    document.body.innerHTML = "<h1 style='color:white; text-align:center;'>Klaar! Je score: " & score & " van " & (UBound(vragen) + 1) & "</h1>"
-    window.setTimeout "SluitAf", 5000
-  End Sub
-
-  Sub SluitAf()
-    self.close
-  End Sub
+Sub EindeQuiz
+    document.body.innerHTML = "<h1>Quiz klaar! Je score is " & score & " van " & (UBound(vragen)+1) & "</h1>"
+    window.setTimeout "self.close", 5000
+End Sub
 </script>
+
 </head>
 
-<body bgcolor="black" style="color:white; font-family:Arial; text-align:center; padding-top:100px;">
-  <div id="lblVraag"></div>
-  <input type="text" id="txtAntwoord" style="font-size:20px; width:300px;"><br><br>
-  <input type="button" value="Bevestig" onclick="VBScript:BevestigKlik" style="font-size:20px;">
+<body bgcolor="black" style="color:white; font-family: Arial; text-align: center; padding-top: 100px; color: white;">
+  <h1 id="vraagLabel">Vraag komt hier...</h1>
+  <input type="text" id="antwoordVeld" style="font-size:20px; width:300px;"><br><br>
+  <input type="button" value="Bevestigen" onclick="VBScript:BevestigAntwoord" style="font-size:20px;">
 </body>
 </html>
