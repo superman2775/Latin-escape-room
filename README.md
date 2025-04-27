@@ -7,3 +7,6 @@ How to download
 - Click on the download button (right top)
 - Ignore all virus warnings
 - Done!
+
+# !IMPORTANT!
+Escape room.hta is a file that doesn't work yet! It probably blocks your computer. When you accidently opened it, press alt+tab to go escape.
