@@ -80,6 +80,6 @@ Do
 Loop
 
 MsgBox "Je hebt de quiz voltooid met een score van " & score & " van de 5!", vbInformation, "Quiz voltooid"
-MsgBox "Het antwoord dat je zoekt is het laatste cijfer 1975 in Romeinse cijfers.", vbInformation, "Antwoord!"
+MsgBox "Het antwoord dat je zoekt is het cijfer 1975 in Romeinse cijfers.", vbInformation, "Antwoord!"
 ' Copyright and stuff
 MsgBox "Copyright 2025 super_man2775. For extra support: send a message on Discord to '@super_man2775.'. The point behind my name is important!"
