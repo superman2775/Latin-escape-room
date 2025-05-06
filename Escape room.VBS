@@ -7,7 +7,7 @@ msgbox "Succesfully loaded everything", 0+64+vbSystemModal, "Succesfully loaded"
 ' Disclaimer
 msgbox "DISCLAIMER: This file doesn't contain a virus or mallware. Virus scan by McCafe Antivirus",0+48+vbSystemModal, "No virus"
 ' Tutorial
-msgbox "Vul de juiste antwoorden in. Als je 1 antwoord fout hebt, moet je het opnieuw proberen. Op het einde van de quiz krijg je een letter die je kunt gebruiken in de kruiswoordpuzzel. Veel succes.",0+32+vbSystemModal,"Tutorial"
+msgbox "Vul de juiste antwoorden in. Als je 1 antwoord fout hebt, moet je het opnieuw proberen. Op het einde van de quiz krijg je een raadsel dat je nodig hebt om de escape room buiten te geraken. Veel succes.",0+32+vbSystemModal,"Tutorial"
 ' Vraag 1
 Do
     Dim antwoord1
