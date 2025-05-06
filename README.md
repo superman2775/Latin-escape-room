@@ -3,10 +3,8 @@
 This is just a school project.
 
 # How to download
-- Click on Escape room.VBS
-- Click on the download button (right top)
-- Ignore all virus warnings
-- Done!
+- Klik op Escape room.VBS
+- Klik op de download knop (rechterbovenhoek)
+- Negeer eventuele antivirus waarschuwingen
+- Klaar!
 
-# !IMPORTANT!
-Escape room.hta is a file that doesn't work yet! It probably blocks your computer. When you accidently opened it, press alt+tab to escape.
