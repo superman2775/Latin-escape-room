@@ -1,6 +1,6 @@
 # Latin-escape-room
 
-This is just a dumb school project.
+This is just a school project.
 
 # How to download
 - Click on Escape room.VBS
