@@ -6,6 +6,8 @@ score = 0
 msgbox "Succesfully loaded everything", 0+64+vbSystemModal, "Succesfully loaded"
 ' Disclaimer
 msgbox "DISCLAIMER: This file doesn't contain a virus or mallware. Virus scan by McCafe Antivirus",0+48+vbSystemModal, "No virus"
+' Authentication
+msgbox "Klik op OK om toegang te krijgen tot deze quiz.",0+48,"Authenticatie - McCafe Antivirus"
 ' Tutorial
 msgbox "Vul de juiste antwoorden in. Als je 1 antwoord fout hebt, moet je het opnieuw proberen. Op het einde van de quiz krijg je een raadsel dat je nodig hebt om de escape room buiten te geraken. Veel succes.",0+32+vbSystemModal,"Tutorial"
 ' Vraag 1
