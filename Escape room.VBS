@@ -61,7 +61,13 @@ Do
         score = score + 1
         Exit Do
     Else
+        If LCase(antwoord4) = "vermoordde" Then
+        MsgBox "Correct!", vbInformation+vbSystemModal, "Goed gedaan"
+        score = score + 1
+        Exit Do
+         Else  
         MsgBox "Fout antwoord. Probeer het opnieuw.", vbExclamation+vbSystemModal, "Oops!"
+        End if
     End If
 Loop
 
